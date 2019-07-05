@@ -24,5 +24,13 @@ public class Perro extends Mascota{
     public String sonido() {
         return "Guau";
     }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
     
 }

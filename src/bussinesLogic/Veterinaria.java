@@ -18,15 +18,48 @@ public class Veterinaria {
     
     
     public void removerMascota(Mascota m){
-        
+        for(Mascota p : mascotas){
+            if(m.equals(p)){
+                mascotas.remove(p);
+                break;
+            }
+        }
     }
     
     public void mostrarMascotasPorTipo(String tipo){
-        
+        for (Mascota m : mascotas) {
+            if(tipo.equals("perro") && m.getClass() == Perro.class){
+                Perro p = (Perro)m;
+                System.out.println("Perros:");
+                System.out.println(p.getId()+" "+p.getNombre()+" "+p.getColorPelo()+" "+p.getRaza());
+            }else if (tipo.equals("gato")&&m.getClass() == Gato.class){
+                Gato p = (Gato)m;
+                System.out.println("Gatoss:");
+                System.out.println(p.getId()+" "+p.getNombre()+" "+p.getColorPelo()+" "+p.isEsCazador());
+            }else if(tipo.equals("hamster")&&m.getClass() == Hamster.class){
+                Hamster p = (Hamster)m;
+                System.out.println("Hamsters:");
+                System.out.println(p.getId()+" "+p.getNombre()+" "+p.getColorPelo()+" "+p.getPeso()); 
+            }
+        }
     }
     
     public void mostrarMascotas(){
-        
+        for (Mascota m : mascotas) {
+            if(m.getClass() == Perro.class){
+                Perro p = (Perro)m;
+                System.out.println("Perros:");
+                System.out.println(p.getId()+" "+p.getNombre()+" "+p.getColorPelo()+" "+p.getRaza());
+            }else if (m.getClass() == Gato.class){
+                Gato p = (Gato)m;
+                System.out.println("Gatoss:");
+                System.out.println(p.getId()+" "+p.getNombre()+" "+p.getColorPelo()+" "+p.isEsCazador());
+            }else if(m.getClass() == Hamster.class){
+                Hamster p = (Hamster)m;
+                System.out.println("Perros:");
+                System.out.println(p.getId()+" "+p.getNombre()+" "+p.getColorPelo()+" "+p.getPeso()); 
+            }
+        }
     }
 
     public ArrayList<Mascota> getMascotas() {

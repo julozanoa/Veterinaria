@@ -13,13 +13,21 @@ public class Hamster extends Mascota{
 
     protected double peso;
     
-    public Hamster(double peso, String id, String nombre, String colorPelo) {
+    public Hamster(String id, String nombre, String colorPelo, double peso) {
         super(id, nombre, colorPelo);
         this.peso = peso;
     }
     @Override
     public String sonido() {
         return "";
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
     
 }

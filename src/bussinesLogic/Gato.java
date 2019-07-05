@@ -13,7 +13,7 @@ public class Gato extends Mascota{
 
     protected boolean esCazador;
 
-    public Gato(boolean esCazador, String id, String nombre, String colorPelo) {
+    public Gato(String id, String nombre, String colorPelo, boolean esCazador) {
         super(id, nombre, colorPelo);
         this.esCazador = esCazador;
     }
@@ -22,6 +22,14 @@ public class Gato extends Mascota{
     @Override
     public String sonido() {
         return "Miau";
+    }
+
+    public boolean isEsCazador() {
+        return esCazador;
+    }
+
+    public void setEsCazador(boolean esCazador) {
+        this.esCazador = esCazador;
     }
     
 }
